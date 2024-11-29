@@ -4,7 +4,10 @@ pipeline
   stages
   {
     stage('print message')
-    {steps{ sh 'echo Hello' }}
+    {steps{ sh 'echo Hello' }
+     {
+    stage('scm checkout')
+    {steps{ sh 'git branch: 'main', url: 'https://github.com/Sujeet-1212/jenkins-test.git'' }}
     
   }
 }
